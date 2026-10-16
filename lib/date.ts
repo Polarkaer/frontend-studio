@@ -1,8 +1,8 @@
 import { cacheLife } from "next/cache";
 
-export async function getCurrentYear(): Promise<number> {
+export async function getCurrentDate(): Promise<Date> {
   "use cache";
-  cacheLife("days");
+  cacheLife("hours");
 
-  return new Date().getFullYear();
+  return new Date();
 }
