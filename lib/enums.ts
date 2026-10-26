@@ -1,0 +1,10 @@
+export enum TimeUnit {
+	YEAR = 'YEAR',
+	MONTH = 'MONTH',
+	WEEK = 'WEEK',
+	DAY = 'DAY',
+	HOUR = 'HOUR',
+	MINUTE = 'MINUTE',
+	SECOND = 'SECOND',
+	MILLISECOND = 'MILLISECOND',
+}

@@ -1,14 +1,10 @@
-import { getCurrentDate } from "@/lib/date";
+import DisplayDate from "./DisplayDate";
+import { TimeUnit } from "@/lib/enums";
 
 export default async function SiteFooter() {
-  const currentDate = await getCurrentDate();
-  const currentYear = currentDate.getFullYear();
-  const formattedDate = currentDate.toLocaleDateString();
-
   return (
     <footer className="bg-gray-800 text-white p-4">
-      <p>&copy; {currentYear} Frontend Studio. All rights reserved.</p>
-      <p>Today&apos;s date is: {formattedDate}</p>
+      <p>&copy; <DisplayDate unit={[TimeUnit.YEAR]} /> Frontend Studio. All rights reserved.</p>
     </footer>
   );
 }
