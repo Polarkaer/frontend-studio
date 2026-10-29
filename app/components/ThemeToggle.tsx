@@ -15,22 +15,22 @@ export default function ThemeToggle() {
   return (
     <button
       aria-label={`Switch to ${isLight ? "dark" : "light"} theme`}
-      className="flex items-center gap-2 rounded border border-current px-3 py-2 text-sm"
+      className="grid size-10 place-items-center rounded-full border border-line text-muted transition hover:border-foreground hover:text-foreground cursor-pointer"
       onClick={toggleTheme}
       type="button"
     >
       {isLight ? (
         <MoonIcon
           aria-hidden="true"
-          className="h-5 w-5"
+          className="h-4 w-4"
         />
       ) : (
         <SunIcon
           aria-hidden="true"
-          className="h-5 w-5"
+          className="h-4 w-4"
         />
       )}
-      <span>Switch to {isLight ? "dark" : "light"} mode</span>
+      <span className="sr-only">Switch to {isLight ? "dark" : "light"} mode</span>
     </button>
   );
 }
