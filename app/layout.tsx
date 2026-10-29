@@ -22,6 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning //TODO: Remove this once the theme toggle is implemented on the server side
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

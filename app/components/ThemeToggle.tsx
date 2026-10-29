@@ -23,13 +23,11 @@ export default function ThemeToggle() {
         <MoonIcon
           aria-hidden="true"
           className="h-5 w-5"
-          suppressHydrationWarning
         />
       ) : (
         <SunIcon
           aria-hidden="true"
           className="h-5 w-5"
-          suppressHydrationWarning
         />
       )}
       <span>Switch to {isLight ? "dark" : "light"} mode</span>
